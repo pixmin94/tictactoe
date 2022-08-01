@@ -1,0 +1,48 @@
+:root {
+    --font-color: #46494b;
+    --field-background-color: #ededee;
+    --field-background-color-hover: #d8e4e9;
+    --border-color: #555;
+    --blue-border-color: #2a3a46;
+    --button-active-background: #c5c3c6;
+    --font: 'Varela Round', sans-serif;
+  }
+
+.main {
+    padding: 0 20px;
+  }
+  
+.message {
+    padding: 20px 0;
+    font-size: 20px;
+    text-align: center;
+}
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 231px;
+    height: 231px;
+    border: 2px solid var(--border-color);
+    margin: 0px auto;
+}
+  
+.field {
+    width: 75px;
+    height: 75px;
+    border: 1px solid var(--border-color);
+    background-color: var(--field-background-color);
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+  
+.field:hover {
+    background-color: var(--field-background-color-hover);
+}
+  
+.center {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
