@@ -13,7 +13,10 @@ function markBox(event) {
     // console.log("clicked" + dataIndex)
     attributeValue = '[data-index="'+dataIndex+'"]'
     document.querySelector(attributeValue).textContent = currentPlayer
+    //add logic to prevent override if box has already been marked
+    checkForWin()
     changePlayer()
+    
 }
 
 function changePlayer(){
@@ -28,9 +31,15 @@ function changePlayer(){
 }
 
 function checkForWin() {
-
+    currentPlayerArray = []
+    var fullArray = document.querySelectorAll(".field")
+    for (let i = 0; i < fullArray.length; i++) {
+        if (fullArray[i].innerHTML == currentPlayer)
+        currentPlayerArray.push(i)
+    }
+    console.log(currentPlayerArray)
 }
 
 function restartGame() {
-    console.log("restart game")
+    window.location.reload();
 }
