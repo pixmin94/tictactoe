@@ -13,6 +13,18 @@ function markBox(event) {
     // console.log("clicked" + dataIndex)
     attributeValue = '[data-index="'+dataIndex+'"]'
     document.querySelector(attributeValue).textContent = currentPlayer
+    changePlayer()
+}
+
+function changePlayer(){
+    if (currentPlayer == 'X') {
+        currentPlayer = 'O'
+        document.getElementById("message").innerHTML = "Player O's turn"
+        
+    } else {
+        currentPlayer = 'X'
+        document.getElementById("message").innerHTML = "Player X's turn"
+    }
 }
 
 function checkForWin() {
