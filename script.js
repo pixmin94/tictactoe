@@ -6,12 +6,19 @@ box.forEach(function(elem) {
     elem.addEventListener("click", markBox)
 })
 
-function markBox() {
-    console.log("clicked")
+document.getElementById("restart-button").addEventListener("click", restartGame)
+
+function markBox(event) {
+    dataIndex = event.target.getAttribute('data-index')
+    // console.log("clicked" + dataIndex)
+    attributeValue = '[data-index="'+dataIndex+'"]'
+    document.querySelector(attributeValue).textContent = currentPlayer
 }
 
 function checkForWin() {
 
 }
 
-document.getElementById("restart-button").addEventListener("click", markBox)
+function restartGame() {
+    console.log("restart game")
+}
